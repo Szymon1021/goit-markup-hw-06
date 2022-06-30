@@ -921,6 +921,8 @@ form {
     
     fill: #000;
    position: absolute;
+    left: 8px;
+    bottom: 24%;
 }
 
 .checkbox-container {
@@ -931,7 +933,7 @@ form {
     padding-left: 0px;
 }
 .modal-form textarea {
-    color: var(--text-grey);
+    
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
@@ -954,7 +956,7 @@ form {
     height: 40px;
     padding-left: 42px;
    display: block;
-    color: var(--text-grey);
+    color: ;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
@@ -962,7 +964,28 @@ form {
     display: block;
     margin-top: 0px;
 }
-
+input:hover {
+outline: none;
+border-color: #2196F3;
+}
+input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+textarea:hover {
+    outline: none;
+    border-color: #2196F3;
+}
+textarea:focus {
+    outline: none;
+        border-color: #2196F3;
+}
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+    margin-top: 0;
+}
 .web-checkbox {
     position: absolute;
     opacity: 0;
@@ -999,14 +1022,27 @@ form {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-    color: var(--text-grey);
+    
     margin-bottom: 4px;
     margin-top: 40px;
 }
+.modal-form .modal-name label:focus-within svg,
+.modal-form .modal-name label:hover svg {
+    fill: #2196F3;
+    border-color:#2196F3 ;
+}
+
 .modal-form > .modal-name > input {
     border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         width: 448px;
         height: 40px;
         padding-left: 42px;
+}
+.web-checkbox:checked + .checkbox-label::before {
+    background-color: var(--blue);
+    border: none;
+    background-image: url(../images\icons.svg/sprite.svg#icon-icon-check);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
